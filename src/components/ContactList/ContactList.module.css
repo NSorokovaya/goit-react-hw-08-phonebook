@@ -1,37 +1,27 @@
-.btn {
-  background: none;
-  border: solid 2px #474544;
-  color: #474544;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  outline: none;
-  padding: 3px 6px;
-  text-transform: uppercase;
-  transition: all 0.3s;
-  border-radius: 5px;
+.contactList {
+  width: fit-content;
+
+  padding: 15px 30px;
 }
 
-.btn:hover {
-  background: #474544;
-  color: #f2f3eb;
-}
-
-.name {
-  font-size: 22px;
+.contact {
   display: flex;
-  justify-content: space-between;
-  width: 400px;
-  margin: 0 auto;
+  /* justify-content: center; */
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+
+  padding: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.list {
-  margin: 20px 0px 0px 0px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.btnDeleteContact {
+  margin-left: 50px;
+  padding: 10px 20px;
+  border-radius: 15px;
 }

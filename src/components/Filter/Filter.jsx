@@ -1,32 +1,37 @@
-import css from './Filter.module.css';
-import { useDispatch } from 'react-redux';
-import { filterContact } from '../../redux/contactSlice';
+//import debounce from "debounce";
+import { useSelector, useDispatch } from "react-redux";
 
+//import propTypes from "prop-types";
+import styles from "./Filter.module.css";
 
+import { updateFilter } from "redux/contacts/filter";
+import { selectFilter } from "redux/contacts/contactsSlice";
 
-const Filter = () => {
+const Filter = (/*{ value, onChange }*/) => {
+  const value = useSelector(selectFilter);
+
   const dispatch = useDispatch();
 
-  const onChangeFilter = (event) => {
-    const { value: newSearchValue } = event.target;
-    dispatch(filterContact (newSearchValue));
+  function onFilterChange(event) {
+    //todo debounce
+    dispatch(updateFilter(event.currentTarget.value));
+
   }
 
-  return (
-    <div className={css.filter}>
-      <label>Find Contacts by name</label>
-      <input
-        id="contact-search-field"
-        type="text"
-        name="search-field"
-        className={css.input}
-        title="Filter Value"
-        onChange={onChangeFilter}
-      />
-    </div>
-  )
+    return (<label>Filter contacts:
+              <input
+                type="text"
+                name="filter"
+                onChange={onFilterChange}
+                value={value}
+                className={styles.inputFilter}
+              />
+            </label>);
+}
+
+Filter.propTypes = {
+    //value: propTypes.string,
+    //onChange: propTypes.func,
 }
 
 export default Filter;
-
-

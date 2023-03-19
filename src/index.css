@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import "modern-normalize/modern-normalize.css";
 
 body {
   margin: 0;
@@ -14,43 +14,16 @@ code {
     monospace;
 }
 
-h1,
-h2,
-p,
-li {
-  margin: 0;
-  padding: 0;
+a {
+  text-decoration: none;
 }
 
-ul {
+ul, ol {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-button {
-  overflow: visible;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-button,
-input,
-select,
-textarea {
-  color: #5a5a5a;
-  font: inherit;
-  margin: 0;
-}
-
-input {
-  line-height: normal;
-}
-.thumb {
-  width: 1000px;
-  margin: 100px auto;
-  text-align: center;
-  border: 3px solid black;
-  padding: 25px;
+img {
+  display: block;
 }
