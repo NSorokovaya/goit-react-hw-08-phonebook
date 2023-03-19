@@ -25,18 +25,7 @@ export default function NavBar({children, isLoggedIn, ...props}) {
             </p>
           }
         </li>
-        {/* 
-        <li>
-          <NavLink end to={'/'} className={({ isActive }) => isActive ? "activeLink" : "inactiveLink"} >
-            Login
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink end to={'/register'} className={({ isActive }) => isActive ? "activeLink" : "inactiveLink"} >
-            Register
-          </NavLink>
-        </li> */}
+        {}
       </ul>
       {children}
     </nav>
