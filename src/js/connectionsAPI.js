@@ -1,28 +1,15 @@
-import axios from "axios";
+import axios from 'axios';
 
-const baseURL = "https://connections-api.herokuapp.com";
+const baseURL = 'https://connections-api.herokuapp.com';
 
 //USER-related requests
 
 export async function registerUser(newUserCreds) {
-  /*
-  newUserCreds = {
-    "name",
-    "email",
-    "password",
-  }
-  */
-  return axios.post(baseURL + "/users/signup", newUserCreds);
+  return axios.post(baseURL + '/users/signup', newUserCreds);
 }
 
 export function loginUser(userCreds) {
-  /*
-  userCreds = {
-    "email",
-    "password",
-  }
-  */
-  return axios.post(baseURL + "/users/login", userCreds);
+  return axios.post(baseURL + '/users/login', userCreds);
 }
 
 export function logoutUser(token) {
@@ -34,7 +21,7 @@ export function logoutUser(token) {
       Authorization: `Bearer ${token}`,
     },
   };
-  return axios.post(baseURL + "/users/logout", null, config);
+  return axios.post(baseURL + '/users/logout', null, config);
 }
 
 export function refreshUser(token) {
@@ -43,7 +30,7 @@ export function refreshUser(token) {
       Authorization: `Bearer ${token}`,
     },
   };
-  return axios.get(baseURL + "/users/current", config);
+  return axios.get(baseURL + '/users/current', config);
 }
 
 //CONTACT-related requests
@@ -54,9 +41,8 @@ export function fetchContacts(token) {
       Authorization: `Bearer ${token}`,
     },
   };
-  return axios.get(baseURL + "/contacts", config);
+  return axios.get(baseURL + '/contacts', config);
 }
-
 
 export function postContact(newContact, token) {
   /*
@@ -70,11 +56,11 @@ export function postContact(newContact, token) {
       Authorization: `Bearer ${token}`,
     },
   };
-  return axios.post(baseURL + "/contacts", newContact, config);
+  return axios.post(baseURL + '/contacts', newContact, config);
 }
 
 export function delContact(id, token) {
-  const deleteURL = baseURL + "/contacts/" + id.toString();
+  const deleteURL = baseURL + '/contacts/' + id.toString();
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -87,7 +73,7 @@ export function patchContact(id, updatedContact, token) {
   /*
   updatedContact = same schema as for new contact
   */
-  const updateURL = baseURL + "/contacts/" + id.toString();
+  const updateURL = baseURL + '/contacts/' + id.toString();
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -95,4 +81,3 @@ export function patchContact(id, updatedContact, token) {
   };
   return axios.patch(updateURL, updatedContact, config);
 }
-
