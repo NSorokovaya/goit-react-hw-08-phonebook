@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 
 import ContactItem from "../ContactItem";
-//import propTypes from "prop-types";
 import styles from "./ContactList.module.css"
 
 
@@ -29,19 +28,11 @@ const ContactList = () => {
             setIsContactFetched(true);
         }   
         return () => {
-            /*if (promise !== null) {
-               promise.abort(); 
-            }*/
-            //setIsContactFetched(false);
+         
         }
     }, [isContactFetched, dispatch]);
 
-    /*function deleteContactById(id) {
-        //console.log(`Trying to delete contact ${id}`);
-        //dispatch(deleteContactOp(id))
-        deleteContactWithFeedback(id);
-        
-    }*/
+  
 
     return (<>
         {(contactStatus === "loading") && <p>[Loading contacts]</p>}
