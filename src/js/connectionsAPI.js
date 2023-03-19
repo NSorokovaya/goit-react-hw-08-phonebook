@@ -46,10 +46,7 @@ export function fetchContacts(token) {
 
 export function postContact(newContact, token) {
   /*
-  newContact = {
-    "name": "Jacob Mercer",
-    "number": "761-23-96"
-  }
+
   */
   const config = {
     headers: {
