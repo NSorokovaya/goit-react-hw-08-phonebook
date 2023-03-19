@@ -5,9 +5,7 @@ import ContactItem from "../ContactItem";
 //import propTypes from "prop-types";
 import styles from "./ContactList.module.css"
 
-/*import { selectItems } from "../../redux/contacts/items";
-import { selectFilter } from "redux/contacts/filter";
-import { selectStatus } from "redux/contacts/status";*/
+
 import { selectItems, selectFilter, selectStatus } from "redux/contacts/contactsSlice";
 
 import { getContactsOp/*, deleteContactOp */} from "redux/contacts/ops";
