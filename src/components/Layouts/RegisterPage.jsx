@@ -50,7 +50,7 @@ export default function RegisterPage(props) {
           className={sharedFormStyle.formInput}
         />
       </label>
-      <p className={ style.hint}>This name will be used to address you as a user</p>
+     
       
       <label htmlFor="email" className={sharedFormStyle.formLabel}>
         E-mail
@@ -63,7 +63,7 @@ export default function RegisterPage(props) {
           className={sharedFormStyle.formInput}
         />
       </label>
-      <p className={ style.hint}>Will be used to log in</p>
+      
       
       <label htmlFor="password" className={sharedFormStyle.formLabel}>
         Password
