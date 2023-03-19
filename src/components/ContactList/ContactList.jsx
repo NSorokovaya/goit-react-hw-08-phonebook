@@ -41,7 +41,6 @@ const ContactList = () => {
         {(contacts && (contacts.length > 0)) &&
             <ul className={styles.contactList}>
                 {contacts.map((contact) => {
-                    // console.log(`${contact.name.toLowerCase()} includes ${lowCaseFilter}: ${contact.name.toLowerCase().includes(lowCaseFilter)}`);
                     return (contact.name.toLowerCase().includes(lowCaseFilter) &&
                         <li key={contact.id} className={styles.contact}>
                             <ContactItem
@@ -61,15 +60,6 @@ const ContactList = () => {
     );
 }
 
-ContactList.propTypes = {
-    // contacts: propTypes.arrayOf(
-    //     propTypes.shape({
-    //         id: propTypes.string.isRequired,
-    //         name: propTypes.string.isRequired,
-    //         number:propTypes.string.isRequired,
-    //     })
-    // ).isRequired,
-    //filter: propTypes.string,
-}
+
 
 export default ContactList;
